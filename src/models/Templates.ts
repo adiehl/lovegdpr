@@ -257,6 +257,35 @@ export class Templates {
               'jedoch noch nicht fest, ob berechtigte Gründe vorliegen, die die Interessen meiner Person überwiegen',
           selected : true },
       ]
+    },
+    {
+      name: 'Ermahnung bei keine Antwort',
+      titleText : 'Letzte außergerichtliche Ermahnung',
+      introText : 'Sehr geehrte Damen und Herren,\n\n' +
+          'leider blieb mein letztes Schreiben an Sie unbeantwortet. Ich skizziere daher noch einmal den bisherigen Schriftverkehr:' +
+          '\n\n',
+      endClause : '\n' +
+          'Ich muss Ihr Schweigen als Weigerung werten, mein Anliegen zu bearbeiten. Ich gebe Ihnen hiermit ' +
+          'letztmalig 14 Tage Zeit, dies nachzuholen, bevor ich gerichtliche Schritte einleite und eine ' +
+          'Beschwerde beim zuständigen Landesdatenschutzbeaufgten einreichen werde.' +
+          '\n' +
+          '\n' +
+          '\n' +
+          'Mit freundlichen Grüßen',
+      textblocks : [
+        { name : 'text1', content: 'Ich habe einen rechtmäßigen Antrag auf Auskunft nach Artikel 15 gestellt.',
+          selected: true },
+        { name : 'text2', content: 'Ich habe einen rechtmäßigen Antrag auf Löschung nach Artikel 17 gestellt.',
+          selected: false },
+        { name : 'text3', content: 'Sie haben unbegründet eine Ausweiskopie verlangt.',
+          selected : false },
+        { name : 'text4', content: 'Sie wurden dazu aufgefordert, zu begründen, warum die Ihnen vorliegenden Identifikationsmerkmale'
+          + ' nicht ausreichen keine anderen Verfahren (z. B. telefonische Nachfrage, Einschreiben, Abfrage der Kundennummer) '
+          + ' in Frage kommen.',
+          selected : false },
+        { name : 'text9', content: 'Sie haben darauf nicht geantwortet.',
+          selected : true },
+      ]
     }
   ];
 }
