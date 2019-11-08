@@ -1,9 +1,9 @@
 <nav class="navbar navbar-dark bg-dark flex-md-nowrap shadow">
-  <span class="navbar-brand col-sm-3 col-md-2 mr-0">DSGVO-Generator</span>
+  <span class="navbar-brand col-sm-3 col-md-2 mr-0">GDPR-Generator</span>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="https://github.com/adiehl/hdgdldsgvo/blob/master/INFO.md" target="_blank">
-        Datenschutzerklärung, Rechtliche Hinweise und Infos</a>
+      <a class="nav-link" href="https://github.com/adiehl/lovegdpr/blob/master/INFO.md" target="_blank">
+        Privacy Info</a>
     </li>
   </ul>
 </nav>
@@ -14,21 +14,21 @@
 
     <div class="col-md-5 order-md-2 mb-5 sidebar bg-light d-md-block d-none">
       <h4 class="d-flex justify-content-between align-items-center mb-3">
-        Vorlage
+        Template
       </h4>
       <select class="form-control mb-3" [(ngModel)]="templateName" (change)="changeTemplate()">
         <option *ngFor="let templateName of templateNames" value="{{templateName}}">{{templateName}}</option>
       </select>
       <ng-container *ngIf="companyList.length">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          Firmenliste
+          Recipients
           <span class="badge badge-success badge-pill">{{companyList.length}}</span>
         </h4>
 
         <ul class="list-group list-group-flush" *ngFor="let company of companyList">
           <li class="list-group-item">
             <div>
-              <h5>{{company.companyName}} <span class="badge badge-success float-right ml-1" (click)="createLetter(company)">Neu</span></h5>
+              <h5>{{company.companyName}} <span class="badge badge-success float-right ml-1" (click)="createLetter(company)">New</span></h5>
 
 
             </div>
@@ -48,17 +48,10 @@
         <!--</form>-->
       </ng-container>
       <h4 class="d-flex justify-content-between align-items-center mb-3 mt-2">
-        Absender
+        Sender
       </h4>
       <textarea rows="6" (change)="saveSender()" [(ngModel)]="sender" class="form-control"></textarea>
-      <!--<h4 class="d-flex justify-content-between align-items-center mb-3">-->
-        <!--<span class="text-muted">Archiv</span>-->
-        <!--<span class="badge badge-secondary badge-pill">{{companyList.length}}</span>-->
-      <!--</h4>-->
 
-      <!--<ul class="list-group">-->
-        <!--<li class="list-group-item" *ngFor="let company of companyList"><h5>{{company.companyName}}</h5></li>-->
-      <!--</ul>-->
 
     </div>
 

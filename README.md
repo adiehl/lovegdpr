@@ -1,34 +1,28 @@
-# HDGDL DSGVO
+# LOVE GDPR
 
-Dieses Projekt soll einen DSGVO-Generator bereitstellen. Jeder soll die Möglichkeit haben, an beliebig viele Firmen, Insitutionen,
-etc. Anfragen nach Artikel 15 der DSGVO zu stellen.
+This project aims to provide a generator for GDPR-requests for data subjects (you). It automates the process of
+creation of such letters.
 
-Diese Anwendung stellt Vorlagen und Textblöcke bereit, um diese Anfragen zu generieren.
+Actually, it is a fork of my (german) procject github.com/adiehl/hdgdldsgvo
 
-# Selbst hosten
+The application provides templates and texblocks to generate letters.
 
-Wenn du diese Anwendung selbst hosten willst, brauchst du Angular und NodeJS. Klone dieses Projekt und führe `ng serve` im 
-Projektverzeichnis aus.
+# Hosting
 
-# Ausprobieren
+If you want to run this project on your computer, you will need NodeJS, run `npm install` and then `ng serve`. 
 
-Du kannst den DSGVO-Generator auch direkt ausprobieren: [https://adiehl.github.io/dsgvo](https://adiehl.github.io/dsgvo).
+# Try it out
 
-# Build
+We have a live version here: [https://adiehl.github.io/lovegdrp](https://adiehl.github.io/lovegdpr).
 
-`ng build --prod --base-href /dsgvo/`
+# Privacy
 
-# Datenschutz
+This application does not send any data to the internet. Every information is stored in localstorage.
 
-Ich nehme Datenschutz ernst. Daher speichere ich absolut keine Daten in dieser Anwendung, außer in deinem eigenen Browser, und
-das per Localstorage. Wenn du z. B. in Chrome F12 drückst und im Tab Application schaust, siehst du welche Daten. Du kannst sie
-auch löschen.
+# License
 
-# Lizenz
+[LICENSE.md](GPL)
 
-Diese Software unterliegt der [LICENSE.md](GPL), ist also freie Software.
+# No warranty
 
-# Keine Garantie
-
-Weder für das Funktionieren der Anwendung noch für die korrektheit der Texte wird Garantie oder Haftung übernommen. 
-Benutzung auf eigene Gefahr.
+This software is provided without any warranty. Use at your own risk.

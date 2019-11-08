@@ -1,34 +1,34 @@
   <h4 class="mb-3">Firma</h4>
   <form class="needs-validation" novalidate>
     <div class="mb-3">
-      <label for="companyName">Firmenname</label>
+      <label for="companyName">Recipient</label>
       <input [(ngModel)]="currentCompany.companyName" name="companyName" type="text" class="form-control" id="companyName" placeholder="" value="" required>
       <div class="invalid-feedback">
-        Firmenname muss angegeben werden
+        Please enter recipient
       </div>
     </div>
 
     <div class="mb-3">
-      <label for="companyAddress">Straße / Postfach</label>
+      <label for="companyAddress">Adress</label>
       <input [(ngModel)]="currentCompany.companyAddress" name="companyAddress"  type="text" class="form-control" id="companyAddress" placeholder="" value="" required>
       <div class="invalid-feedback">
-        Anchrift erforderlich
+        Please enter address
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-3 mb-3">
-        <label for="companyZip">PLZ</label>
+        <label for="companyZip">Postcode</label>
         <input [(ngModel)]="currentCompany.companyZip" name="companyZip"  type="text" class="form-control" id="companyZip" placeholder="" value="" required>
         <div class="invalid-feedback">
-          PLZ erforderlich
+          Postcode required
         </div>
       </div>
       <div class="col-md-9 mb-3">
-        <label for="companyCity">Ort</label>
+        <label for="companyCity">City</label>
         <input [(ngModel)]="currentCompany.companyCity" name="companyCity"  type="text" class="form-control" id="companyCity" placeholder="" value="" required>
         <div class="invalid-feedback">
-          Ort erforderlich
+          City required
         </div>
       </div>
     </div>
@@ -46,18 +46,18 @@
 
 
     <div class="mb-3">
-      <label for="companyCountry">Land (nur bei Ausland)</label>
+      <label for="companyCountry">Country</label>
       <input [(ngModel)]="currentCompany.companyCountry" name="companyCountry"  type="text" class="form-control" id="companyCountry" placeholder="" value="">
     </div>
     <div class="mb-3">
-      <label for="contractNumber">Vertragsnummer, Geschäftszeichen, Kennzeichen (Optional)</label>
-      <input [(ngModel)]="currentCompany.contractNumber" name="contractNumber"  type="text" class="form-control" id="contractNumber" placeholder="Telefonnummer, Vertragsnummer, Aktenzeichen, etc." value="">
+      <label for="contractNumber">Contract Number, Bank Account Number, etc. (optional)</label>
+      <input [(ngModel)]="currentCompany.contractNumber" name="contractNumber"  type="text" class="form-control" id="contractNumber" placeholder="File Number, Phone Number, Contract Number" value="">
     </div>
 
 
     <div class="mb-3">
-      <label for="remarks">Weitere Bemerkungen (optional)</label>
-      <textarea [(ngModel)]="currentCompany.remarks" name="remarks"  class="form-control" id="remarks" placeholder="z. B. bezug auf ein vorheriges Schreiben, präzisierung des Auskunftsersuchens"></textarea>
+      <label for="remarks">Further Remarks (optional)</label>
+      <textarea [(ngModel)]="currentCompany.remarks" name="remarks"  class="form-control" id="remarks" placeholder="e. g. related to previous letter"></textarea>
 
     </div>
 
@@ -65,7 +65,7 @@
     <h4 class="mb-3">{{letter.titleText}}</h4>
     <span [hidden]="letter.rawText">
       <div class="float-right">{{getDate()}}</div><br />
-      <p *ngIf="currentCompany.contractNumber">Betreff: {{currentCompany.contractNumber}}</p>
+      <p *ngIf="currentCompany.contractNumber">Subject: {{currentCompany.contractNumber}}</p>
 
       <p>{{letter.introText}}</p>
 
@@ -83,8 +83,8 @@
     <hr class="mb-4">
     <div class="container">
       <div class="row">
-        <div class="col-sm"><button (click)="saveCompany()" class="btn btn-primary btn-lg btn-block" type="submit">Eintrag speichern</button></div>
-        <div class="col-sm"><button (click)="editText()" class="btn btn-secondary btn-lg btn-block" type="submit">Text bearbeiten</button></div>
+        <div class="col-sm"><button (click)="saveCompany()" class="btn btn-primary btn-lg btn-block" type="submit">Save</button></div>
+        <div class="col-sm"><button (click)="editText()" class="btn btn-secondary btn-lg btn-block" type="submit">Edit Text</button></div>
       </div>
     </div>
 
